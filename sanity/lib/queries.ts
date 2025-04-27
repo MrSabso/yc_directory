@@ -72,3 +72,23 @@ export const STARTUPS_BY_AUTHOR_QUERY = defineQuery(`*[_type == 'startup' && aut
   category, 
   image
 }`);
+
+export const GET_STARTUP_BY_ID = defineQuery(`
+  *[_type == "startup" && _id == $id][0] {
+    _id,
+    title,
+    description,
+    category,
+    image,
+    pitch,
+    slug,
+    _createdAt,
+    author -> {
+      _id,
+      name,
+      username,
+      image,
+      bio
+    }
+  }
+`);
