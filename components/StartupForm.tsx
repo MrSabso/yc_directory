@@ -1,5 +1,7 @@
 'use client'
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import React, { useActionState, useState } from 'react'
 import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
@@ -76,6 +78,7 @@ const StartupForm = () => {
         status: "INITIAL",
     });
     
+    console.log(state);
 
   return (
     <form action={formAction} className='startup-form'>
