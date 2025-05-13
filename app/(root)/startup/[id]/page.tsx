@@ -35,11 +35,19 @@ const page = async ({ params }: { params: Promise<{ id: string}>} ) => {
       </section>
 
       <section className='section_container'>
-        <img 
+
+        <Image 
+          src={post.image ?? "https://via.placeholder.co/48"}
+          alt='thumbnail'
+          className='w-full h-auto rounded-xl' 
+          width={1000}
+          height={500}
+        />
+        {/* <img 
           src={post.image ?? "https://via.placeholder.com/48"} 
           alt="thumbnail"
           className='w-full h-auto rounded-xl'        
-        />
+        /> */}
 
         <div className='space-y-5 mt-10 max-w-4xl mx-auto'>
           <div className='flex-between gap-5'>
